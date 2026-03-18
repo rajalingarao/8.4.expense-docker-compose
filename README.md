@@ -6,7 +6,7 @@ Login into backend server:
 apt update
 ```
 ```
-apt install default-mysql-client
+apt install default-mysql-client -y
 ```
 ```
 mysql -h mysql -u root -pExpenseApp@1
@@ -18,7 +18,12 @@ mysql -h mysql -u root -pExpenseApp@1
 for i in mysql backend frontend ; do cd $i ; docker build -t $i:v1.1 . ; cd ..; done
 
 ```
-
+```
+docker compose up -d
+```
+```
+docker compose down
+```
 ```
 docker build -t mysql:v1.1 .
 ```
